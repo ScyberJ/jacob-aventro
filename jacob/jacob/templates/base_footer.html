@@ -1,0 +1,42 @@
+{% load icon %}
+{% load static %}
+<footer>
+    <section class='text-center'>
+        {% block footer_header %}
+            <img class='h-20 m-auto' src="{% static 'aventro-edge.png' %}" alt="aventro group logo">
+        {% endblock footer_header %}
+    </section>
+    <section class='bg-cardinal text-white px-16 py-8 flex flex-col gap-6'>
+        <div class='grid grid-cols-2'>
+            <div class='flex flex-col'>
+                <h4 class='text-4xl font-inter font-black mb-4'>Aventro Group</h4>
+                <a href="">Aventro Edge Solutions</a>
+                <a href="">Aventro Bureau de Change</a>
+                <a href="">Aventro Real Estate and Property Development</a>
+                <a href="">Aventro Insurance Brokers</a>
+            </div>
+            <div>
+                {% block other_links %}
+                {% endblock other_links %}
+            </div>
+        </div>
+        <div class='w-full'>
+            <h4 class='text-4xl font-inter font-black mb-4'>Contact</h4>
+            <div class='grid grid-cols-2'>
+                <span class='flex gap-2'>
+                    {% icon 'mail' %}
+                    {% block email %}
+                        <a href="mailto:enquiries@aventrogroup.com">enquiries@aventrogroup.com</a>
+                    {% endblock email %}
+                </span>
+                <span class='flex gap-2'>{% icon 'phone' %} +264 81 608 1770</span>
+            </div>
+        </div>
+        <div class='flex gap-2'>
+            {% icon 'map-pin' %} 946 Ambrose Street , Kleine Kuppe, Windhoek	
+        </div>
+    </section>
+    <section class='p-4'>
+        <span>© Aventro Group 2024</span>
+    </section>
+</footer>

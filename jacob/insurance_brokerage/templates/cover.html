@@ -1,0 +1,15 @@
+{% extends "index.html" %}
+{% load static %}
+
+{% block content %}
+    <section class='mb-8'>
+        <header class='relative'>
+            <img class='h-[50vh] brightness-50 w-full object-cover' src="{% static cover.filename %}" alt="{{ cover.name }}">
+            <h1 class='text-6xl font-inter font-black text-white absolute bottom-0 left-2'>{{ cover.name }} Insurance</h1>
+        </header>
+        <p class='font-lora font-bold p-16 text-center text-2xl'>
+            {{ cover.description }}
+        </p>
+        <button class="bg-cardinal p-4 font-inter font-black hover:bg-cardinal-600 text-white block m-auto">GET IN TOUCH</button>
+    </section>
+{% endblock content %}

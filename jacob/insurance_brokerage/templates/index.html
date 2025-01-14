@@ -1,0 +1,83 @@
+{% extends "base.html" %} 
+{% load static %} 
+{% load icon %} 
+
+{% block nav %}
+<nav
+  class="flex justify-between items-center shadow-md p-2 sticky top-0 z-50 bg-white font-lora"
+>
+  <a href="{% url 'home' %}"
+    ><img
+      class="h-20"
+      src="{% static 'aventro-insurance.png' %}"
+      alt="aventro insurance brokerage logo"
+  /></a>
+  <ul class="flex gap-6 text-gray-200 font-semibold">
+    <a href="{% url 'home' %}#coverage" class="hover:text-cardinal"><li>What We Cover</li></a>
+    <a href="{% url 'about_us' %}#reinsurance" class="hover:text-cardinal"><li>Reinsurance Broking</li></a>
+    <a href="{% url 'about_us' %}#risk" class="hover:text-cardinal"><li>Risk Management</li></a>
+    <a href="{% url 'about_us' %}#benefits" class="hover:text-cardinal"><li>Employee Benefits</li></a>
+  </ul>
+</nav>
+{% endblock nav %}
+
+{% block content %}
+<section class="h-[90vh] p-32 relative overflow-hidden">
+  <h1 class="text-7xl font-inter font-black text-white mb-2">
+    We Got You Covered
+  </h1>
+  <p class="text-4xl font-lora text-white mb-2">
+    Your insurance broker of choice
+  </p>
+<a href="#coverage">
+  <button
+    class="block bg-gray hover:bg-gray-600 text-2xl p-2 text-white font-bold"
+  >
+    GET COVERAGE
+  </button>
+</a>
+  <div
+    class="max-w-md bg-gray text-xl text-white font-lora text-center p-2 absolute right-[10%] bottom-[20%]"
+  >
+    Aventro Insurance Brokers specializes in providing comprehensive and
+    innovative insurance solutions tailored to meet the diverse needs of
+    individuals, businesses, and organizations.
+  </div>
+  <div
+    class="bg-cardinal -z-10 -top-[12rem] -left-[50rem] w-[200rem] h-[35rem] -rotate-[10deg] absolute"
+  ></div>
+</section>
+<section class="p-8" id='coverage'>
+  <h2 class="text-cardinal text-6xl font-inter font-black">What We Cover</h2>
+  <ul class="grid grid-cols-3 p-4 gap-4">
+    {% for cover in covers %}
+    <a href="{% url 'insurance_cover' cover.name_to_slug %}">
+      <li class="group shadow-sm drop-shadow-sm">
+        <img src="{% static cover.filename %}" alt="{{ cover.name }} Cover" />
+        <div
+          class="flex justify-between items-center bg-gray group-hover:bg-cardinal text-white font-lora font-bold p-4 text-xl"
+        >
+          {{ cover.name }} {% icon 'chevron-right' %}
+        </div>
+      </li>
+    </a>
+    {% endfor %}
+  </ul>
+</section>
+<section>
+  <header class='bg-cardinal text-white font-inter font-black text-6xl p-16 w-fit ml-auto mb-2'>Why Choose Aventro Insurance Brokers?</header>
+  <section class='flex items-center'>
+    <img src="{% static 'why-choose-insurance.png' %}" alt="Guy writing down important insurance info" />
+    <p class='font-lora text-4xl p-16'>
+      At Aventro Insurance Brokers, we pride ourselves on our customer-first
+      approach, offering personalized solutions to meet the unique needs of
+      every client. Our expertise, extensive network, and commitment to
+      sustainability make us a trusted partner for all your insurance and risk
+      management needs.
+    </p>
+  </section>
+</section>
+{% endblock content %}
+{% block footer %}
+    {% include "footer.html" %} 
+{% endblock footer %}

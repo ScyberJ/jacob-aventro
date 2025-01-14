@@ -1,0 +1,62 @@
+{% extends "index.html" %} 
+{% load static %}
+
+{% block content %}
+<section class='relative'>
+    <img class='w-full h-[30vh] object-cover brightness-50' src="{% static 'what-we-do.jpg' %}" alt="">
+    <h1 class='absolute bottom-0 left-0 text-6xl font-inter font-black text-white'>What We Also Do</h1>
+</section>
+<section class='grid grid-cols-3 px-2 py-10 gap-2'>
+  <section id="reinsurance ">
+    <div class='flex flex-col gap-2 group  rounded text-center border border-white hover:border-cardinal'>
+      <h2 class="font-inter font-black text-4xl text-cardinal group-hover:bg-cardinal group-hover:text-white rounded-t p-2">Reinsurance Broking</h2>
+      <p class="font-lora text-xl p-8 group-hover:shadow-2xl group-hover:drop-shadow-2xl ">
+        We act as a trusted intermediary, connecting insurers with reliable
+        reinsurance partners to ensure robust risk management. By providing
+        tailored reinsurance solutions, we help insurers effectively manage
+        their risk portfolios, offering the necessary support to mitigate
+        potential losses. Our expertise extends to assisting with both treaty
+        and facultative reinsurance arrangements, ensuring that each solution is
+        customized to meet the specific needs and complexities of the insurer’s
+        business. Our goal is to facilitate strong partnerships and
+        comprehensive risk-sharing arrangements that enhance the stability and
+        resilience of the insurance industry.
+      </p>
+    </div>
+  </section>
+  <section id="benefits">
+    <div class='flex flex-col gap-2 group rounded text-center border border-white hover:border-cardinal'>
+      <h2 class="font-inter font-black text-4xl text-cardinal group-hover:bg-cardinal group-hover:text-white rounded-t p-2">Investments and Employee Benefits</h2>
+      <p class="font-lora text-xl p-8 group-hover:shadow-2xl group-hover:drop-shadow-2xl ">
+        We specialize in designing comprehensive employee benefit packages,
+        which include pension funds and group insurance, to ensure that
+        businesses can provide their workforce with financial security and peace
+        of mind. In addition to these benefits, we offer investment management
+        services to help grow wealth securely, enabling both employers and
+        employees to achieve their long-term financial goals. Our expert team
+        also advises employers on compliance with regulations and strategies for
+        optimizing benefits, ensuring that offerings are competitive and
+        effective in retaining top talent. Our aim is to support businesses in
+        fostering a motivated, secure, and loyal workforce.
+      </p>
+    </div>
+  </section>
+  <section id="risk">
+    <div class='flex flex-col gap-2  group rounded text-center border border-white hover:border-cardinal'>
+      <h2 class="font-inter font-black text-4xl text-cardinal group-hover:bg-cardinal group-hover:text-white rounded-t p-2">Risk Management and Consulting</h2>
+      <p class="font-lora text-xl p-8 group-hover:shadow-2xl group-hover:drop-shadow-2xl">
+        We specialize in identifying and mitigating potential risks for both
+        businesses and individuals, ensuring that vulnerabilities are addressed
+        proactively. By providing tailored risk management strategies, we help
+        minimize exposure to unforeseen events and financial losses. Our team
+        conducts regular assessments to ensure that our clients remain fully
+        protected, even as the environment and circumstances evolve. With a
+        focus on ongoing support and vigilance, we work to adapt strategies and
+        solutions to meet the changing needs of our clients, offering continued
+        peace of mind and security.
+      </p>
+    </div>
+  </section>
+</section>
+<button class="bg-cardinal mb-4 p-4 font-inter font-black hover:bg-cardinal-600 text-white block m-auto">GET IN TOUCH</button>
+{% endblock content %}

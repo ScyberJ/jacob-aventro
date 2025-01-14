@@ -1,0 +1,26 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'output.css' %}">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Lora:ital,wght@0,400..700;1,400..700&display=swap" rel="stylesheet">
+    <title>
+        {% block title %}
+        Aventro Group
+        {% endblock title %}
+    </title>
+</head>
+<body >
+    {% block nav %}
+    {% endblock nav %}
+    {% block content %}{% endblock content %} 
+    {% include "group_section.html" %} 
+    {% block footer %}
+        {% comment %} {% include "base_footer.html" %}  {% endcomment %}
+    {% endblock footer %}
+</body>
+</html>
