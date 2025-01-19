@@ -11,3 +11,15 @@
 html{
     scroll-behavior: smooth;
 }
+
+label{
+    @apply my-2 flex gap-2
+}
+
+div:has(textarea[name='message']){
+    @apply col-span-2
+}
+
+input, select, textarea{
+    @apply bg-gray-900 rounded p-2 outline-none border-none w-full
+}

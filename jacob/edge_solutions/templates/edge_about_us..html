@@ -1,0 +1,23 @@
+{% extends "edge_home.html" %}
+{% load static %}
+
+{% block title %}
+    About | Aventro Group
+{% endblock title %}
+
+{% block content %}
+    <section class='flex relative '>
+        <div class='border-[4rem] border-r-gray border-t-gray border-b-transparent border-l-transparent absolute right-0 top-0  h-2'></div>
+        <section class='overflow-hidden min-w-[50%]'>
+            <img class='h-full w-full object-cover' src="{% static 'about-us-banner.jpg' %}" alt="About us">
+        </section>
+        <div class='p-16'>
+            <h1 class='text-6xl text-cardinal font-inter font-black mb-2'>About us</h1>
+            <p class='text-2xl font-lora font-semibold '>
+                Aventro Edge Solutions and Trading is a multi-disciplinary firm dedicated to providing innovative, sustainable, and customer-focused
+                solutions across a variety of sectors. Our mission is to empower businesses and individuals through expert consultancy, cutting-edge
+                technology, and efficient supply chain solutions.
+            </p>
+        </div>
+    </section>
+{% endblock content %}

@@ -1,0 +1,26 @@
+{% extends "edge_home.html" %}
+{% load static %}
+
+{% block title %}
+    Contact | Aventro Group
+{% endblock title %}
+
+{% block content %}
+    <section class='h-[50vh] overflow-hidden'>
+        <img class='object-cover' src="{% static 'contact-us-banner.jpg' %}" alt="">
+    </section>
+    <section class='grid grid-cols-2'>
+        <div class='w-full *:w-full h-full *:h-full'>
+            <iframe class='h-full *:h-full' src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3682.934595591824!2d17.110344774172113!3d-22.618917427644202!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1c0b05460821bf01%3A0x3ad7cd4dee6c204b!2s946%20Ambrose%20Street%2C%20Windhoek!5e0!3m2!1sen!2sna!4v1736937005763!5m2!1sen!2sna" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+        <section class='p-8 drop-shadow-lg'>
+            <h3 class='text-6xl font-black font-inter text-cardinal'>Contact Form</h3>
+            <form class='flex flex-col gap-2' method='post' action="">
+                <div class='grid grid-cols-2 gap-2'>
+                    {{ form }}
+                </div>
+                <button class='col-span-2 p-4 bg-cardinal text-white w-full text-xl font-semibold hover:bg-cardinal-600'>Submit</button>
+            </form>
+        </section>
+    </section>
+{% endblock content %}

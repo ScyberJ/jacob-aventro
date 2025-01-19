@@ -3,7 +3,9 @@
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "python ./jacob/manage.py runserver",
+    "watch": "npx tailwindcss -i ./jacob/static/tailwind.css -o ./jacob/static/output.css --watch"
   },
   "keywords": [],
   "author": "",

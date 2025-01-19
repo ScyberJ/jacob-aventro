@@ -1,0 +1,16 @@
+{% extends "edge_home.html" %}
+
+{% block title %}
+    {{ solution.name }} | Aventro 
+{% endblock title %}
+
+{% block content %}
+    <section class='relative p-16 flex flex-col gap-2'>
+        <img class='w-full h-full brightness-75 object-cover absolute top-0 left-0 right-0 bottom-0 -z-10' src="{{ solution.background.url }}" alt="">
+        <h1 class='text-6xl text-white  font-inter font-black'>{{ solution.name }}</h1>
+        <p class='p-4 text-2xl bg-gray text-white'>
+            {{ solution.description|safe }}
+        </p>
+        <a class='self-end' href="{% url 'contact_us' %}"><button class='w-fit p-4 font-lora font-semibold text-xl bg-cardinal hover:bg-cardinal-600 text-white'>Get in touch</button></a>
+    </section>
+{% endblock content %}
