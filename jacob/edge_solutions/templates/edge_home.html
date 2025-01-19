@@ -13,7 +13,7 @@
         alt="aventro insurance brokerage logo"
     /></a>
     <ul class="flex gap-6 text-gray-200 font-semibold">
-        <a href="{% url 'home' %}#coverage" class="hover:text-cardinal"><li>Services</li></a>
+        <a href="{% url 'home' %}#services" class="hover:text-cardinal"><li>Services</li></a>
         <a href="{% url 'about_us' %}" class="hover:text-cardinal"><li>About us</li></a>
         <a href="{% url 'contact_us' %}" class="hover:text-cardinal"><li>Contact us</li></a>
     </ul>
@@ -40,7 +40,7 @@
     </div>
 </section>
 
-<section class='p-8 min-h-40 '>
+<section class='p-8 min-h-40 ' id='services'>
     <header class='my-4'>
         <h2 class='text-6xl font-inter font-black text-cardinal'>Services</h2>
         <sub class='text-xl font-semibold font-lora'>All our products</sub>
@@ -48,7 +48,7 @@
     
     <hr class='my-8 border-gray opacity-45'>
 
-    <ul class='flex gap-2  overflow-x-auto overflow-y-auto w-full'>
+    <ul id='service-list' class='flex gap-2 scroll-smooth  overflow-x-auto overflow-y-auto w-full'>
         {% for solution in solutions %}
         <a href="{% url 'solution' slug=solution.generate_slug %}" class=' min-w-[30rem] relative flex-shrink rounded group'>
             <li >
@@ -67,11 +67,13 @@
         {% endfor %}
     </ul>
     <div class='flex my-4 items-center gap-2 justify-center'>
-        {% icon 'chevron-left' %}
-        <span class='bg-cardinal block h-5 w-5 rounded-full cursor-pointer'></span>
-        <span class='bg-gray block h-5 w-5 rounded-full cursor-pointer'></span>
-        <span class='bg-gray block h-5 w-5 rounded-full cursor-pointer'></span>
-        {% icon 'chevron-right' %}
+        <button onclick='const serviceListLeft = document.getElementById("service-list"); serviceListLeft.scrollLeft -= serviceListLeft.children[0].clientWidth + (0.5 * parseFloat(getComputedStyle(document.documentElement).fontSize));'>
+            {% icon 'chevron-left' %}
+        </button>
+        <button onclick='const serviceListRight = document.getElementById("service-list"); serviceListRight.scrollLeft += serviceListRight.children[0].clientWidth + (0.5 * parseFloat(getComputedStyle(document.documentElement).fontSize));'>
+            {% icon 'chevron-right' %}
+        </button>
+
     </div>
 
 </section>
