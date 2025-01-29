@@ -19,10 +19,14 @@ from django.contrib import admin
 from django.urls import path, include
 from django.conf.urls.static import static
 
+from general.views import contact_us
+
 urlpatterns = [
     path('admin/', admin.site.urls),
     path("insurance-brokerage/", include("insurance_brokerage.urls")),
     path("edge-solutions/", include("edge_solutions.urls")),
+    path("bureau-de-change/", include("bdc.urls")),
+    path('contact-us', contact_us, name='contact_us'),
 ]
 
 if settings.DEBUG:

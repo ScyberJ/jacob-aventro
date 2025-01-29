@@ -1,9 +1,30 @@
-{% extends "edge_home.html" %}
+{% extends "base.html" %}
 {% load static %}
 
 {% block title %}
     Contact | Aventro Group
 {% endblock title %}
+
+{% block nav %}
+    <nav
+    class="flex justify-between items-center shadow-md p-2 sticky top-0 z-50 bg-white font-inter"
+    >
+    <a href="{% url 'contact_us' %}"
+        ><img
+        class="h-20"
+        src="{% static 'aventro-group-logo.png' %}"
+        alt="aventro group logo"
+    /></a>
+    <ul class="flex gap-6 text-gray-200 font-semibold">
+        <a href="{% url 'home' %}" class="hover:text-cardinal"><li>Edge Solutions</li></a>
+        <a href="{% url 'bdc:home' %}" class="hover:text-cardinal"><li>Bureau de change</li></a>
+        <a href="{% url 'ib:home' %}" class="hover:text-cardinal"><li>Insurance Brokers</li></a>
+        {% comment %} <a href="{% url 'contact_us' %}" class="hover:text-cardinal"><li>Real Estate</li></a> {% endcomment %}
+    </ul>
+    </nav>
+
+{% endblock nav %}
+
 
 {% block content %}
     <section class='h-[50vh] overflow-hidden'>
@@ -24,3 +45,4 @@
         </section>
     </section>
 {% endblock content %}
+

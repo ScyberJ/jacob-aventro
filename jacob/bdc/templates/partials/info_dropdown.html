@@ -1,0 +1,18 @@
+<li class=''>
+    <details class='group cursor-help bdc-details'>
+        <summary class='hover:text-cardinal text-2xl '>{{ title }}</summary>
+
+        <span >
+            <div class='scale-y-0 text-xl border-l border-l-gray-800 p-2 ml-2   group-open:scale-y-100 origin-top  transition-all'>
+                {{ info }}
+            </div>
+        </span>
+        <div class='flex justify-end cursor-default'>
+            <a href="{% url 'contact_us' %}?app=bdc" class='flex w-fit justify-end items-center'>
+                <button class=' w-fit bg-cardinal py-2 px-4 text-white font-bold hover:bg-cardinal-600'>
+                    Get in Touch
+                </button>
+            </a>
+        </div>
+    </details>
+</li>

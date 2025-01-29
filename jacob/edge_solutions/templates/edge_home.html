@@ -30,7 +30,7 @@
         <p class='font-lora text-2xl'>
             Get in touch with us today to unlock your business’s full potential. Let’s create smarter, more efficient solutions for tomorrow!
         </p>
-        <a class='w-full' href="{% url 'contact_us' %}"><button class='p-6 bg-cardinal font-lora font-bold text-white text-xl'>Get in Touch</button></a>
+        <a class='w-full' href="{% url 'contact_us' %}?app=edge_solutions"><button class='p-6 bg-cardinal font-lora font-bold text-white text-xl'>Get in Touch</button></a>
     </div>
     <div class='overflow-hidden relative h-full'>
         <div class='border-[6rem] border-r-cardinal border-t-cardinal border-b-transparent border-l-transparent absolute right-0 top-0 border-y-[15rem]'></div>
@@ -88,7 +88,7 @@
             <p class='font-lora text-3xl   '>
                 Our team of experts is dedicated to delivering value-driven solutions tailored to your specific needs. By leveraging our wide-ranging expertise, innovative approaches, and customer-first philosophy, we aim to help you achieve your business objectives efficiently and sustainably.
             </p>
-            <button class='p-6 w-full bg-cardinal font-lora font-bold text-white text-xl'>Get in touch</button>
+            <a href="{% url 'contact_us' %}?app=edge_solutions"><button class='p-6 w-full bg-cardinal font-lora font-bold text-white text-xl'>Get in touch</button></a>
         </div>
     </div>
 </section>

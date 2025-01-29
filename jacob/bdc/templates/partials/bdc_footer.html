@@ -1,0 +1,19 @@
+{% extends "base_footer.html" %}
+{% load static %}
+
+{% block footer_header %}
+    <img class='h-20 m-auto' src="{% static 'aventro-edge.png' %}" alt="aventro edge solutions logo">
+{% endblock footer_header %}
+
+{% block other_links %}
+    <h4 class='text-4xl font-inter font-black mb-4'>Links</h4>
+    <a href="{% url 'bdc:exchange' %}" class=''><li>Exchange</li></a>
+    <a href="{% url 'bdc:transfer' %}" class=''><li>Transfer</li></a>
+    <a href="{% url 'bdc:hedge' %}" class=''><li>Hedge</li></a>
+    <a href="{% url 'bdc:travel' %}" class=''><li>Travel</li></a>
+    <a href="{% url 'bdc:consult' %}" class=''><li>Consult</li></a>
+{% endblock other_links %}
+
+{% block email %}
+    <a href="mailto:forex@aventrogroup.com">forex@aventrogroup.com</a>
+{% endblock email %}

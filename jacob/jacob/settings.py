@@ -42,6 +42,7 @@ INSTALLED_APPS = [
     'general',
     'insurance_brokerage',
     'edge_solutions',
+    'bdc'
 ]
 
 MIDDLEWARE = [

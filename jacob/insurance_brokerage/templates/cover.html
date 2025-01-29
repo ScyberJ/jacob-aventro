@@ -10,6 +10,6 @@
         <p class='font-lora font-bold p-16 text-center text-2xl'>
             {{ cover.description }}
         </p>
-        <button class="bg-cardinal p-4 font-inter font-black hover:bg-cardinal-600 text-white block m-auto">GET IN TOUCH</button>
+        <a href="{% url 'contact_us' %}?app=insurance_brokerage"><button class="bg-cardinal p-4 font-inter font-black hover:bg-cardinal-600 text-white block m-auto">GET IN TOUCH</button></a>
     </section>
 {% endblock content %}

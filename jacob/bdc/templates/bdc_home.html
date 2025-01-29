@@ -1,0 +1,80 @@
+{% extends "base.html" %}
+{% load static %}
+{% load icon %}
+
+{% block nav %}
+    <nav
+    class="flex justify-between items-center shadow-md py-2 px-8 sticky top-0 z-50 bg-white font-inter"
+    >
+    <a href="{% url 'bdc:home' %}"
+        ><img
+        class="h-20"
+        src="{% static 'aventro-bdc.png' %}"
+        alt="aventro bureau de change logo"
+    /></a>
+    <ul class="flex gap-6 text-gray-200 font-lora uppercase text-xl font-semibold">
+        <a href="{% url 'bdc:exchange' %}" class="hover:text-cardinal"><li>Exchange</li></a>
+        <a href="{% url 'bdc:transfer' %}" class="hover:text-cardinal"><li>Transfer</li></a>
+        <a href="{% url 'bdc:hedge' %}" class="hover:text-cardinal"><li>Hedge</li></a>
+        <a href="{% url 'bdc:travel' %}" class="hover:text-cardinal"><li>Travel</li></a>
+        <a href="{% url 'bdc:consult' %}" class="hover:text-cardinal"><li>Consult</li></a>
+    </ul>
+    </nav>
+
+{% endblock nav %}
+
+
+{% block content %}
+
+    <section class='p-32 text-center flex flex-col gap-2'>
+        <h1 class='font-lora text-7xl font-bold'>
+            <span class='text-cardinal'>EXCHANGE</span> OR <span class='text-cardinal'>TRANSFER </span>
+            YOUR MONEY
+        </h1>
+        <a href="{% url 'contact_us' %}?app=bdc">
+            <button class='w-fit self-center bg-cardinal hover:bg-cardinal-600 py-8 px-16 text-white font-bold text-2xl'>
+                Get in Touch
+            </button>
+        </a>
+    </section>
+
+    <section class='grid grid-cols-2 w-full max-h-[50rem] overflow-hidden'>
+        <section class=' font-lora p-16'>
+            <header class='mb-4'>
+                <h2 class='text-6xl text-cardinal font-bold'>Services</h2>
+                <sub class='text-2xl'>what we offer</sub>
+            </header>
+            <ul class='flex flex-col gap-4'>
+                {% include "partials/info_dropdown.html" with title='Currency Exchange Services' info='Our currency exchange services offer competitive rates for major global currencies, catering to travelers, businesses, and international students. We ensure quick and secure transactions for buying and selling foreign currency, providing a seamless and reliable experience for our customers.' %}
+                {% include "partials/info_dropdown.html" with title='International Money Transfers' info='We facilitate fast and secure international money transfers for individuals and businesses by partnering with global financial institutions to ensure reliable service. Our offerings support both inbound and outbound remittance services, providing a seamless transfer experience.' %}
+                {% include "partials/info_dropdown.html" with title='Corporate Foreign Exchange Solutions' info='We provide businesses with tailored forex solutions to manage international transactions, offering assistance with currency risk management and hedging strategies. Our services enable seamless cross-border payments and trade financing, ensuring efficient and secure global transactions.' %}
+                {% include "partials/info_dropdown.html" with title='Travel Money Services' info='We offer pre-paid currency cards and traveler’s cheques for added convenience and security, along with currency delivery services to simplify travel preparation. Additionally, we advise travelers on local currency needs and exchange regulations to ensure a smooth and hassle-free experience.' %}
+                {% include "partials/info_dropdown.html" with title='Hedging and Risk Management' info='We help businesses mitigate currency risks through forward contracts and options, providing strategic advice on managing exposure to fluctuating exchange rates. Additionally, we conduct market analysis to guide decision-making in volatile currency markets, ensuring informed and effective financial strategies.' %}
+                {% include "partials/info_dropdown.html" with title='Compliance and Regulatory Services' info='We ensure all transactions comply with local and international financial regulations, adhering to AML and KYC standards to prevent fraudulent activities. Our commitment to transparency and accountability guarantees secure and trustworthy operations.' %}
+                {% include "partials/info_dropdown.html" with title='Educational and Advisory Services' info='We offer workshops and resources to educate clients on forex markets and currency management, providing personalized consulting for businesses expanding into international markets. Additionally, we advise individuals on best practices for foreign currency transactions, ensuring informed financial decisions.' %}
+            </ul>
+
+        </section>
+        <img src="{% static 'bdc-notes-rolled.png' %}" alt="notes rolled">
+
+    </section>
+    <section class='grid grid-cols-2 w-full max-h-[50rem] overflow-hidden'>
+        <img src="{% static 'bdc-notes-loose.png' %}" alt="notes loose">
+        <section class='font-lora p-16'>
+            <h2 class='text-gray text-6xl font-bold'>Why choose Aventro Bureau de Change?</h2>
+            <p class='text-2xl py-4'>
+                Aventro Bureau de Change is committed to delivering reliable and customer-focused services.
+                <br>
+                <br>
+                With a combination of competitive rates, expert advice, and seamless processes, we aim to be your trusted partner for all currency exchange and international financial needs.            
+            </p>
+        </section>
+    </section>
+
+
+{% endblock content %}
+
+
+{% block footer %}
+    {% include "partials/bdc_footer.html" %}
+{% endblock footer %}

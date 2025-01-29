@@ -20,7 +20,8 @@
     {% block content %}{% endblock content %} 
     {% include "group_section.html" %} 
     {% block footer %}
-        {% comment %} {% include "base_footer.html" %}  {% endcomment %}
+        {% include "base_footer.html" %} 
     {% endblock footer %}
+    <script src="{% static 'js/code.js' %}"></script>
 </body>
 </html>

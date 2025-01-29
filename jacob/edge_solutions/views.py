@@ -1,6 +1,5 @@
 from django.shortcuts import render
 from .models import Solution
-from .forms import ContactForm
 
 # Create your views here.
 def index(request):
@@ -14,14 +13,3 @@ def solution_page(request, slug):
     solution = Solution.get_instance_from_slug(slug)
 
     return render(request, 'service_page.html', context={'solution': solution})
-
-def contact_us(request):
-    form = ContactForm()
-
-
-    if request.POST:
-        form = ContactForm(request.POST)
-
-        pass
-    
-    return render(request, 'contact_page.html', context={"form": form})
